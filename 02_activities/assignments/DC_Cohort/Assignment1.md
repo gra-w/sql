@@ -3,7 +3,7 @@
 🚨 **Please review our [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md)** 🚨 for detailed instructions on how to format, branch, and submit your work. Following these guidelines is crucial for your submissions to be evaluated correctly.
 
 #### Submission Parameters:
-* Submission Due Date: `March 31, 2026`
+* Submission Due Date: `October 28, 2026`
 * Weight: 30% of total grade
 * The branch name for your repo should be: `assignment-one`
 * What to submit for this assignment:
@@ -14,10 +14,10 @@
     * Open a private window in your browser. Copy and paste the link to your pull request into the address bar. Make sure you can see your pull request properly. This helps the technical facilitator and learning support staff review your submission easily.
 
 Checklist:
-- [ ] Create a branch called `assignment-one`.
-- [ ] Ensure that the repository is public.
-- [ ] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
-- [ ] Verify that the link is accessible in a private browser window.
+- [X] Create a branch called `assignment-one`.
+- [X] Ensure that the repository is public.
+- [X] Review [the PR description guidelines](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md#guidelines-for-pull-request-descriptions) and adhere to them.
+- [X] Verify that the link is accessible in a private browser window.
 
 If you encounter any difficulties or have questions, please don't hesitate to reach out to our team via our Slack. Our Technical Facilitators and Learning Support staff are here to help you navigate any challenges.
 
@@ -209,5 +209,15 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+
+As a neuroscience researcher, I regularly encounter databases that aim to reflect the value of inclusivity but ultimately prioritize scientific efficiency. We try to isolate the variables of interest to answer our research questions, which involves deciding what demographic information to collect and how to account for individual differences. However, these decisions also reflect our scope and assumptions about which aspects of a person’s background matter the most and how those characteristics should be categorized.
+
+For example, much of past literature and neuroscience research has often examined differences in neural processing by biological sex, sometimes using “sex” and “gender” interchangeably. Although many of our present demographic questionnaires now ask about gender identities separately, analyses may still often group participants solely by sex. This raises an important question: when we collect more inclusive demographic information but lack the statistical power to compare gender identity groups, how can we ensure those identities are meaningfully acknowledged?
+
+One important nuance is that sex and gender identity are distinct, where insufficient statistical power does not make one a substitute for the other. We should be clear about what we actually measured, for example, sex assigned at birth, and why it is relevant to our research question, rather than assuming it captures all relevant biological characteristics. We can also acknowledge the identities represented in our sample without making unsupported group comparisons, while protecting the privacy of participants in small subgroups. This highlights a tension between offering inclusive response options and designing research that can meaningfully represent those responses.
+
+Similarly, recording someone’s language background as simply “native” or “non-native” may overlook multilingual experiences and differences in when and how they learned a language. These categories make data easier to organize and analyze, but they can also simplify people’s identities and leave some experiences unrepresented. In both examples, our database choices reflect the researchers' judgments about which differences matter and whose experiences remain visible in the resulting research.
+
+I believe a good and fair demographic database does not necessarily mean collecting every possible background detail, as it is impossible to capture and quantify someone's experience in its entirety. Instead, it requires being thoughtful about why we collect certain information, allowing appropriate flexibility in how people describe themselves, and understanding and acknowledging the implications of categorizing the participants based on this demographic information. Experimental control is valuable, but we should also consider how the choices that make our data easier to analyze affect inclusion and the conclusions we can reasonably draw.
+
 ```
