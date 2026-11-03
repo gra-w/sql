@@ -3,7 +3,7 @@
 🚨 **Please review our [Assignment Submission Guide](https://github.com/UofT-DSI/onboarding/blob/main/onboarding_documents/submissions.md)** 🚨 for detailed instructions on how to format, branch, and submit your work. Following these guidelines is crucial for your submissions to be evaluated correctly.
 
 #### Submission Parameters:
-* Submission Due Date: `April 07, 2026`
+* Submission Due Date: `November 4, 2026`
 * Weight: 70% of total grade
 * The branch name for your repo should be: `assignment-two`
 * What to submit for this assignment:
@@ -57,7 +57,13 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Assuming each customer only has one current mailing address, the two architectures we can consider for CUSTOMER_ADDRESS are:
+
+Type 1 overwrites the address. In this architecture, we use customer_id as both the primary key and a foreign key to Customer table. The CUSTOMER_ADDRESS table will have street_address, city, province, and postal_code as attributes. Each customer has one address row and when the customer moves, the row will be updated with the new address, such that only the current address is retained.
+
+Type 2 retains customer's address history. In this architecture, we give each address version its own primary key, customer_address_id, and keep customer_id as a foreign key linking it to the Customer table. We use the same address attributes (e.g., street_address, city, province, and postal_code), and add two dates: valid_from and valid_to.
+
+So when a customer moves, we set the previous row’s valid_to and the new row’s valid_from to the move/change date. The new address is valid starting that day, and its valid_to is NULL because it has no end date yet. So a NULL value in valid_to identifies the current address, so this will let the store look up which address was valid when a customer places an order.
 ```
 
 ***
@@ -193,5 +199,12 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+What stood out to me in Boykis’s article was the difference between how we value the AI systems and how we value the people whose decisions make those systems possible. Companies can justify spending millions of dollars on data centres because computing power is understood to be essential. Yet the work of looking at an image, deciding what it shows, and assigning a label can earn someone only cents per task. In the case of ImageNet, millions of these individual judgments became a resource that researchers could use for years. As a researcher, I could benefit from a label every time I used the dataset, while the person who supplied it might have been paid just once for a few seconds of work. This makes me question who gets to share in the value of a scientific advance.
+
+The stakes become much higher and personal when the task involves reviewing violent and explicit material. As a user, I benefit when a platform filters out an image I may find disturbing, while content moderator may have had to examine that same image closely, decide whether it crossed a threshold, and then move on to many more. These repeated exposure can take a psychological toll that lasts and can result in severe trauma. When we state that technology advances humanity, we need to include the well beings of all humanitiys in mind and understand whose life it improves 
+
+Boykis also made me think about how one generation’s decisions can shape what later generations accept as knowledge. ImageNet drew on categories from WordNet, which means that some decisions about how to describe people were made before anyone imagined using those categories to classify a photograph. One example in the article was a system labelling someone an “orphan” based on their appearance. No amount of careful image labelling could make family history something a camera can see. Yet once that category appears in a dataset, a researcher might reasonably ask how accurately a model predicts it and overlook the more basic question of why the model is being asked to predict it at all.
+
+As we rely more on these systems, I think we need to understand the nuance, the labour, and the origins of where these systems come from. The people who make decisions about what to include in a dataset, how to label it, and how to use it are not neutral. They are influenced by their own experiences, biases, and the social context in which they live. This means that the outputs of AI systems can reflect those same biases, even if the system itself is designed to be objective.
+
 ```
